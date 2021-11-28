@@ -199,12 +199,14 @@ $('#submit').click(function(e){
 
             console.log('BOAS: '+boas);
             console.log('RUINS: '+ruins);
-            var Yield = boas/(boas+ruins);
-            console.log('Yield: '+Yield);
+            var total = Number(boas) + Number(ruins);
+            console.log('Total: '+total.toString());
+            var resp = Number(boas) / Number(total);
+            console.log('Yield: '+resp.toString());
 
             $('#boas').html('<span class="mensagem">'+boas+'</span>');
             $('#ruins').html('<span class="mensagem">'+ruins+'</span>');
-            $('#yield').html('<span class="mensagem">'+Yield+'</span>');
+            $('#yield').html('<span class="mensagem">'+resp.toFixed(2).toString()+'</span>');
     
 
     })
